@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container" >
+
+<h2>Student Form</h2><br>
+
+<form action="#" th:action="@{/students/save}" th:object="${studentt}" method="post">
+
+
+	
+	
+	First Name:
+	<input th:field="*{firstName}" placeholder="firstname" type="text"  class="form-control" required=true/><br>
+		
+	Last Name:	
+	<input th:field="*{lastName}" placeholder="lastname" type="text" class="form-control" required=true/><br>
+	
+	Email:
+	<input th:field="*{email}" placeholder="email" type="text"  class="form-control" required=true/><br>
+	
+	
+	<input type="submit" value="Save" />
+	</form>
+	</div>
+</body>
+</html>
